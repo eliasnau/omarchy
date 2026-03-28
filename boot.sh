@@ -34,7 +34,7 @@ fi
 
 sudo pacman -Syu --noconfirm --needed git
 
-# Use custom repo if specified, otherwise default to basecamp/omarchy
+# Use custom repo if specified, otherwise default to eliasnau/omarchy
 OMARCHY_REPO="${OMARCHY_REPO:-eliasnau/omarchy}"
 
 echo -e "\nCloning Omarchy from: https://github.com/${OMARCHY_REPO}.git"
