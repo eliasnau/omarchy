@@ -16,6 +16,7 @@ brightnessctl
 btop
 chromium
 clang
+caligula
 claude-code
 cups
 cups-browsed
@@ -111,7 +112,6 @@ ruby
 rust
 satty
 sddm
-signal-desktop
 slurp
 spotify
 starship
