@@ -1,8 +1,15 @@
 #!/bin/bash
 
-# Overwrite the user config for the Plymouth drive decryption and boot sequence with the Omarchy default and rebuild it.
+# Refresh the Plymouth drive decryption and boot sequence theme.
+# Copies defaults first, then overlays any user customizations from config/plymouth/.
 
 sudo cp ~/.local/share/omarchy/default/plymouth/* /usr/share/plymouth/themes/omarchy/
+
+# Override with user customizations (e.g. custom logo.png or lock.png)
+if compgen -G ~/.local/share/omarchy/config/plymouth/*.png &>/dev/null; then
+  sudo cp ~/.local/share/omarchy/config/plymouth/*.png /usr/share/plymouth/themes/omarchy/
+fi
+
 sudo plymouth-set-default-theme omarchy
 
 if command -v limine-mkinitcpio &>/dev/null; then

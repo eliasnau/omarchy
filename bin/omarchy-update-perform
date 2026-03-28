@@ -18,6 +18,7 @@ omarchy-update-aur-pkgs
 omarchy-update-orphan-pkgs
 omarchy-hook post-update
 
+omarchy-refresh-plymouth
 omarchy-update-analyze-logs
 
 omarchy-update-restart
